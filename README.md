@@ -2,7 +2,7 @@
 
 Kho template triển khai ứng dụng bằng Docker Compose cho hệ sinh thái `hitechcloud`.
 
-> Metadata version hiện tại: `1.2.0`
+> Metadata version hiện tại: `1.3.0`
 
 ## Mục lục
 
@@ -145,6 +145,32 @@ Hiện tại repository đang có các ứng dụng sau:
 | Bun | `bun` | Runtime | `1.2` | JavaScript runtime hiệu năng cao |
 | Strapi | `strapi` | Website / CMS | `5` | Headless CMS phổ biến |
 | NocoDB | `nocodb` | Tool / Database | `0.262` | Airtable mã nguồn mở |
+| PrestaShop | `prestashop` | Website / Ecommerce | `8.2` | Nền tảng ecommerce mã nguồn mở |
+| Appsmith | `appsmith` | Tool / AppHub | `1.60` | Low-code platform cho internal tools |
+| File Browser | `filebrowser` | Tool / Storage / NAS | `2.31` | Quản lý file qua web |
+| Syncthing | `syncthing` | Storage / NAS | `1.29` | Đồng bộ file P2P |
+| Duplicati | `duplicati` | Storage / NAS | `2.0` | Backup automation |
+| ClickHouse | `clickhouse` | Database / Analytics | `25.1` | Columnar analytics database |
+| Typesense | `typesense` | Database / Search | `28.0` | Search engine cho ứng dụng |
+| Qdrant | `qdrant` | Database / AI / Search | `1.13` | Vector database |
+| Weaviate | `weaviate` | Database / AI / Search | `1.28` | AI-native vector database |
+| Ollama | `ollama` | AI / LLM | `0.6` | Chạy mô hình AI cục bộ |
+| Open WebUI | `open-webui` | AI / LLM / Tool | `0.6` | Web UI cho Ollama và LLM |
+| Flowise | `flowise` | AI / LLM / Tool | `2.2` | Orchestration workflow cho LLM |
+| AnythingLLM | `anythingllm` | AI / LLM / Tool | `1.7` | Chat với knowledge base riêng |
+| Langfuse | `langfuse` | AI / LLM / Monitoring | `2.95` | Observability cho ứng dụng LLM |
+| LiteLLM | `litellm` | AI / LLM / Middleware | `1.61` | Gateway thống nhất cho model provider |
+| OpenHands | `openhands` | AI / LLM / DevOps | `0.28` | AI coding agent platform |
+| MCP Gateway | `mcp-gateway` | MCP / Middleware | `0.1` | Gateway cho Model Context Protocol |
+| Supabase Studio | `supabase` | AppHub / Database | `2025.03` | Console cho backend platform |
+| Baserow | `baserow` | AppHub / Database | `1.31` | No-code database platform |
+| Windmill | `windmill` | Tool / DevOps | `1.417` | Automation và internal workflows |
+| Airbyte | `airbyte` | CI/CD / DevOps / Data | `1.5` | Data sync và ELT |
+| Metabase | `metabase` | Analytics / Monitoring | `0.53` | BI dashboard và analytics |
+| Plausible | `plausible` | Analytics / Monitoring | `3.0` | Website analytics nhẹ |
+| Matomo | `matomo` | Analytics / Monitoring | `5.1` | Web analytics self-hosted |
+| Listmonk | `listmonk` | Email / Tool | `4.1` | Newsletter và mailing list |
+| Stalwart Mail | `stalwart-mail` | Email / System | `0.11` | Mail server self-hosted |
 
 ## Quy ước chung của template
 

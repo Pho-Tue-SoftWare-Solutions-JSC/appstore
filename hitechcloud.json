@@ -1,7 +1,7 @@
 {
   "valid": true,
   "violations": [],
-  "lastModified": 1774742400,
+  "lastModified": 1774828800,
   "apps": [
     {
       "icon": "",
@@ -1056,6 +1056,786 @@
           "lastModified": 1774742400
         }
       ]
+    },
+    {
+      "icon": "",
+      "name": "PrestaShop",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "PrestaShop",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "开源电商建站平台",
+        "shortDescEn": "Open-source ecommerce website platform",
+        "key": "prestashop",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://prestashop.com",
+        "github": "https://github.com/PrestaShop/PrestaShop",
+        "document": "https://devdocs.prestashop-project.org/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.2",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Appsmith",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Appsmith",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "低代码内部工具平台",
+        "shortDescEn": "Low-code platform for internal tools",
+        "key": "appsmith",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.appsmith.com",
+        "github": "https://github.com/appsmithorg/appsmith",
+        "document": "https://docs.appsmith.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.60",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "File Browser",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "File Browser",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "轻量级 Web 文件管理器",
+        "shortDescEn": "Lightweight web file manager",
+        "key": "filebrowser",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://filebrowser.org",
+        "github": "https://github.com/filebrowser/filebrowser",
+        "document": "https://filebrowser.org/installation",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 128,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.31",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Syncthing",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Syncthing",
+        "type": "storage",
+        "tags": ["storage", "tool"],
+        "shortDescZh": "点对点文件同步平台",
+        "shortDescEn": "Peer-to-peer file synchronization platform",
+        "key": "syncthing",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://syncthing.net",
+        "github": "https://github.com/syncthing/syncthing",
+        "document": "https://docs.syncthing.net/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.29",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Duplicati",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Duplicati",
+        "type": "storage",
+        "tags": ["storage", "tool"],
+        "shortDescZh": "备份与恢复自动化工具",
+        "shortDescEn": "Backup and recovery automation tool",
+        "key": "duplicati",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://www.duplicati.com",
+        "github": "https://github.com/duplicati/duplicati",
+        "document": "https://docs.duplicati.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.0",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "ClickHouse",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "ClickHouse",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "高性能列式分析数据库",
+        "shortDescEn": "High-performance columnar analytics database",
+        "key": "clickhouse",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://clickhouse.com",
+        "github": "https://github.com/ClickHouse/ClickHouse",
+        "document": "https://clickhouse.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "25.1",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Typesense",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Typesense",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "开发者友好的搜索引擎",
+        "shortDescEn": "Developer-friendly search engine",
+        "key": "typesense",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://typesense.org",
+        "github": "https://github.com/typesense/typesense",
+        "document": "https://typesense.org/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "28.0",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Qdrant",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Qdrant",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "向量数据库与相似性搜索引擎",
+        "shortDescEn": "Vector database and similarity search engine",
+        "key": "qdrant",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://qdrant.tech",
+        "github": "https://github.com/qdrant/qdrant",
+        "document": "https://qdrant.tech/documentation/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.13",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Weaviate",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Weaviate",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "AI 原生向量搜索数据库",
+        "shortDescEn": "AI-native vector search database",
+        "key": "weaviate",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://weaviate.io",
+        "github": "https://github.com/weaviate/weaviate",
+        "document": "https://docs.weaviate.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.28",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Ollama",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Ollama",
+        "type": "tool",
+        "tags": ["tool", "runtime"],
+        "shortDescZh": "本地大模型运行平台",
+        "shortDescEn": "Local large language model runtime platform",
+        "key": "ollama",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 9,
+        "website": "https://ollama.com",
+        "github": "https://github.com/ollama/ollama",
+        "document": "https://github.com/ollama/ollama/tree/main/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 4096,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.6",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Open WebUI",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Open WebUI",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "自托管 LLM Web 界面",
+        "shortDescEn": "Self-hosted web UI for LLMs",
+        "key": "open-webui",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 9,
+        "website": "https://openwebui.com",
+        "github": "https://github.com/open-webui/open-webui",
+        "document": "https://docs.openwebui.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.6",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Flowise",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Flowise",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "可视化 LLM 工作流编排工具",
+        "shortDescEn": "Visual orchestration tool for LLM workflows",
+        "key": "flowise",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://flowiseai.com",
+        "github": "https://github.com/FlowiseAI/Flowise",
+        "document": "https://docs.flowiseai.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.2",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "AnythingLLM",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "AnythingLLM",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "私有知识库与 LLM 助手平台",
+        "shortDescEn": "Private knowledge base and LLM assistant platform",
+        "key": "anythingllm",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://anythingllm.com",
+        "github": "https://github.com/Mintplex-Labs/anything-llm",
+        "document": "https://docs.anythingllm.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.7",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Langfuse",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Langfuse",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "LLM 可观测性与追踪平台",
+        "shortDescEn": "LLM observability and tracing platform",
+        "key": "langfuse",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://langfuse.com",
+        "github": "https://github.com/langfuse/langfuse",
+        "document": "https://langfuse.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.95",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "LiteLLM",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "LiteLLM",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "统一 LLM API 网关",
+        "shortDescEn": "Unified API gateway for LLM providers",
+        "key": "litellm",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.litellm.ai",
+        "github": "https://github.com/BerriAI/litellm",
+        "document": "https://docs.litellm.ai/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.61",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "OpenHands",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "OpenHands",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "面向开发者的 AI 编码代理平台",
+        "shortDescEn": "AI coding agent platform for developers",
+        "key": "openhands",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.all-hands.dev",
+        "github": "https://github.com/All-Hands-AI/OpenHands",
+        "document": "https://docs.all-hands.dev/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.28",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "MCP Gateway",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "MCP Gateway",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "模型上下文协议网关服务",
+        "shortDescEn": "Gateway service for Model Context Protocol",
+        "key": "mcp-gateway",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://github.com/idosal/mcp-gateway",
+        "github": "https://github.com/idosal/mcp-gateway",
+        "document": "https://github.com/idosal/mcp-gateway",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.1",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Supabase Studio",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Supabase Studio",
+        "type": "tool",
+        "tags": ["tool", "database"],
+        "shortDescZh": "Postgres 后端与开发平台控制台",
+        "shortDescEn": "Console for Postgres backend and developer platform",
+        "key": "supabase",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://supabase.com",
+        "github": "https://github.com/supabase/supabase",
+        "document": "https://supabase.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2025.03",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Baserow",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Baserow",
+        "type": "tool",
+        "tags": ["tool", "database"],
+        "shortDescZh": "无代码数据库协作平台",
+        "shortDescEn": "No-code collaborative database platform",
+        "key": "baserow",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://baserow.io",
+        "github": "https://github.com/bram2w/baserow",
+        "document": "https://baserow.io/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.31",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Windmill",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Windmill",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "开发者自动化与内部工作流平台",
+        "shortDescEn": "Developer automation and internal workflow platform",
+        "key": "windmill",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://windmill.dev",
+        "github": "https://github.com/windmill-labs/windmill",
+        "document": "https://www.windmill.dev/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.417",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Airbyte",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Airbyte",
+        "type": "devops",
+        "tags": ["devops", "database"],
+        "shortDescZh": "数据同步与 ELT 平台",
+        "shortDescEn": "Data synchronization and ELT platform",
+        "key": "airbyte",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://airbyte.com",
+        "github": "https://github.com/airbytehq/airbyte",
+        "document": "https://docs.airbyte.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.5",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Metabase",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Metabase",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "开源商业智能与数据分析平台",
+        "shortDescEn": "Open-source business intelligence and analytics platform",
+        "key": "metabase",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.metabase.com",
+        "github": "https://github.com/metabase/metabase",
+        "document": "https://www.metabase.com/docs/latest/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.53",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Plausible",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Plausible",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "轻量级网站分析平台",
+        "shortDescEn": "Lightweight website analytics platform",
+        "key": "plausible",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://plausible.io",
+        "github": "https://github.com/plausible/community-edition",
+        "document": "https://plausible.io/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "3.0",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Matomo",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Matomo",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "自托管网站分析平台",
+        "shortDescEn": "Self-hosted web analytics platform",
+        "key": "matomo",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://matomo.org",
+        "github": "https://github.com/matomo-org/matomo",
+        "document": "https://matomo.org/guide/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5.1",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Listmonk",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Listmonk",
+        "type": "tool",
+        "tags": ["tool"],
+        "shortDescZh": "开源邮件列表与新闻订阅平台",
+        "shortDescEn": "Open-source mailing list and newsletter platform",
+        "key": "listmonk",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://listmonk.app",
+        "github": "https://github.com/knadh/listmonk",
+        "document": "https://listmonk.app/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "4.1",
+          "lastModified": 1774828800
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Stalwart Mail",
+      "readMe": "",
+      "lastModified": 1774828800,
+      "additionalProperties": {
+        "name": "Stalwart Mail",
+        "type": "tool",
+        "tags": ["tool"],
+        "shortDescZh": "现代自托管邮件服务器",
+        "shortDescEn": "Modern self-hosted mail server",
+        "key": "stalwart-mail",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://stalw.art",
+        "github": "https://github.com/stalwartlabs/mail-server",
+        "document": "https://stalw.art/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.11",
+          "lastModified": 1774828800
+        }
+      ]
     }
   ],
   "additionalProperties": {
@@ -1072,6 +1852,6 @@
       {"key": "docker", "name": "Docker", "sort": 10},
       {"key": "monitoring", "name": "Monitoring", "sort": 11}
     ],
-    "version": "1.2.0"
+    "version": "1.3.0"
   }
 }
