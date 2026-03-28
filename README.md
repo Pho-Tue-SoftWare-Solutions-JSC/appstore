@@ -2,7 +2,7 @@
 
 Kho template triển khai ứng dụng bằng Docker Compose cho hệ sinh thái `hitechcloud`.
 
-> Metadata version hiện tại: `1.3.0`
+> Metadata version hiện tại: `1.4.0`
 
 ## Mục lục
 
@@ -171,6 +171,25 @@ Hiện tại repository đang có các ứng dụng sau:
 | Matomo | `matomo` | Analytics / Monitoring | `5.1` | Web analytics self-hosted |
 | Listmonk | `listmonk` | Email / Tool | `4.1` | Newsletter và mailing list |
 | Stalwart Mail | `stalwart-mail` | Email / System | `0.11` | Mail server self-hosted |
+| Immich | `immich` | Storage / Media | `1.129` | Backup và quản lý ảnh/video self-hosted |
+| PhotoPrism | `photoprism` | Storage / Media / AI | `240915` | Quản lý thư viện ảnh bằng AI |
+| Jellyfin | `jellyfin` | Media / Streaming | `10.10` | Media server mã nguồn mở |
+| Audiobookshelf | `audiobookshelf` | Media / Library | `2.17` | Quản lý audiobook và podcast |
+| Calibre-Web | `calibre-web` | Media / Library | `0.6` | Giao diện web cho thư viện ebook |
+| Vaultwarden | `vaultwarden` | Security / Tool | `1.32` | Password manager tương thích Bitwarden |
+| Paperless-ngx | `paperless-ngx` | Tool / Document | `2.14` | Lưu trữ tài liệu và OCR |
+| Seafile | `seafile` | Storage / Collaboration | `11.0` | Đồng bộ và chia sẻ tệp doanh nghiệp |
+| Homebox | `homebox` | Tool / Home | `0.15` | Quản lý tài sản và vật dụng gia đình |
+| Docmost | `docmost` | Tool / Wiki | `0.19` | Nền tảng tài liệu và knowledge base |
+| Glance | `glance` | Tool / Dashboard | `0.6` | Dashboard tối giản cho self-hosting |
+| Homepage | `homepage` | Tool / Dashboard | `0.10` | Cổng điều hướng dịch vụ self-hosted |
+| Traefik | `traefik` | Proxy / Middleware | `3.3` | Reverse proxy cloud-native |
+| Caddy | `caddy` | Proxy / Web Server | `2.9` | Web server tự động HTTPS |
+| Kong | `kong` | Proxy / API Gateway | `3.9` | API gateway và traffic management |
+| Keycloak | `keycloak` | Security / IAM | `26.1` | Identity và single sign-on |
+| Zitadel | `zitadel` | Security / IAM | `2.66` | Quản lý danh tính và truy cập hiện đại |
+| Harbor | `harbor` | DevOps / Registry | `2.12` | Private container registry doanh nghiệp |
+| GitLab | `gitlab` | Git / DevOps | `17.10` | Nền tảng Git và CI/CD all-in-one |
 
 ## Quy ước chung của template
 

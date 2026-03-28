@@ -1,0 +1,25 @@
+version: "3"
+services:
+  glance:
+    image: glanceapp/glance:0.6.2
+    container_name: ${CONTAINER_NAME:-glance}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8084}:8080"
+    volumes:
+      - glance_config:/app/config
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /app/config || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  glance_config:
+
+networks:
+  tinohost-network:
+    external: true

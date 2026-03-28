@@ -1,0 +1,36 @@
+version: "3"
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:17.10.1-ce.0
+    container_name: ${CONTAINER_NAME:-gitlab}
+    restart: unless-stopped
+    hostname: ${GITLAB_HOSTNAME:-gitlab.local}
+    ports:
+      - "${HTTP_PORT:-8090}:80"
+      - "${HTTPS_PORT:-9443}:443"
+      - "${SSH_PORT:-2222}:22"
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost:8090'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2222
+    volumes:
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /var/opt/gitlab || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - tinohost-network
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,7 +1,7 @@
 {
   "valid": true,
   "violations": [],
-  "lastModified": 1774828800,
+  "lastModified": 1774915200,
   "apps": [
     {
       "icon": "",
@@ -1836,6 +1836,576 @@
           "lastModified": 1774828800
         }
       ]
+    },
+    {
+      "icon": "",
+      "name": "Immich",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Immich",
+        "type": "storage",
+        "tags": ["storage", "tool"],
+        "shortDescZh": "自托管照片与视频备份管理平台",
+        "shortDescEn": "Self-hosted photo and video backup platform",
+        "key": "immich",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://immich.app",
+        "github": "https://github.com/immich-app/immich",
+        "document": "https://immich.app/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.129",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "PhotoPrism",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "PhotoPrism",
+        "type": "storage",
+        "tags": ["storage", "tool"],
+        "shortDescZh": "AI 驱动的照片管理与浏览平台",
+        "shortDescEn": "AI-powered photo management and browsing platform",
+        "key": "photoprism",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.photoprism.app",
+        "github": "https://github.com/photoprism/photoprism",
+        "document": "https://docs.photoprism.app/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "240915",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Jellyfin",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Jellyfin",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "开源媒体服务器",
+        "shortDescEn": "Open-source media server",
+        "key": "jellyfin",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://jellyfin.org",
+        "github": "https://github.com/jellyfin/jellyfin",
+        "document": "https://jellyfin.org/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "10.10",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Audiobookshelf",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Audiobookshelf",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "有声书与播客服务器",
+        "shortDescEn": "Audiobook and podcast server",
+        "key": "audiobookshelf",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.audiobookshelf.org",
+        "github": "https://github.com/advplyr/audiobookshelf",
+        "document": "https://www.audiobookshelf.org/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.17",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Calibre-Web",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Calibre-Web",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "电子书 Web 管理界面",
+        "shortDescEn": "Web interface for ebook library management",
+        "key": "calibre-web",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://github.com/janeczku/calibre-web",
+        "github": "https://github.com/janeczku/calibre-web",
+        "document": "https://github.com/janeczku/calibre-web/wiki",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.6",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Vaultwarden",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Vaultwarden",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "轻量级 Bitwarden 兼容密码管理服务",
+        "shortDescEn": "Lightweight Bitwarden-compatible password manager",
+        "key": "vaultwarden",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://github.com/dani-garcia/vaultwarden",
+        "github": "https://github.com/dani-garcia/vaultwarden",
+        "document": "https://github.com/dani-garcia/vaultwarden/wiki",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.32",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Paperless-ngx",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Paperless-ngx",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "文档归档与 OCR 管理平台",
+        "shortDescEn": "Document archiving and OCR management platform",
+        "key": "paperless-ngx",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://paperless-ngx.com",
+        "github": "https://github.com/paperless-ngx/paperless-ngx",
+        "document": "https://docs.paperless-ngx.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.14",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Seafile",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Seafile",
+        "type": "storage",
+        "tags": ["storage", "tool"],
+        "shortDescZh": "企业级文件同步与共享平台",
+        "shortDescEn": "Enterprise file sync and sharing platform",
+        "key": "seafile",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.seafile.com",
+        "github": "https://github.com/haiwen/seafile-docker",
+        "document": "https://manual.seafile.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "11.0",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Homebox",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Homebox",
+        "type": "tool",
+        "tags": ["tool"],
+        "shortDescZh": "家庭资产与库存管理系统",
+        "shortDescEn": "Home inventory and asset management system",
+        "key": "homebox",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://hay-kot.github.io/homebox/",
+        "github": "https://github.com/hay-kot/homebox",
+        "document": "https://hay-kot.github.io/homebox/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.15",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Docmost",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Docmost",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "协作知识库与文档平台",
+        "shortDescEn": "Collaborative knowledge base and documentation platform",
+        "key": "docmost",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://docmost.com",
+        "github": "https://github.com/docmost/docmost",
+        "document": "https://docmost.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.19",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Glance",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Glance",
+        "type": "tool",
+        "tags": ["tool"],
+        "shortDescZh": "轻量级个人仪表盘首页",
+        "shortDescEn": "Lightweight personal dashboard homepage",
+        "key": "glance",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://github.com/glanceapp/glance",
+        "github": "https://github.com/glanceapp/glance",
+        "document": "https://github.com/glanceapp/glance",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.6",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Homepage",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Homepage",
+        "type": "tool",
+        "tags": ["tool", "docker"],
+        "shortDescZh": "可视化服务导航与状态仪表盘",
+        "shortDescEn": "Service dashboard and visual homepage",
+        "key": "homepage",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://gethomepage.dev",
+        "github": "https://github.com/gethomepage/homepage",
+        "document": "https://gethomepage.dev/latest/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.10",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Traefik",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Traefik",
+        "type": "proxy",
+        "tags": ["proxy", "devops"],
+        "shortDescZh": "现代化云原生反向代理与负载均衡器",
+        "shortDescEn": "Modern cloud-native reverse proxy and load balancer",
+        "key": "traefik",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://traefik.io/traefik/",
+        "github": "https://github.com/traefik/traefik",
+        "document": "https://doc.traefik.io/traefik/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "3.3",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Caddy",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Caddy",
+        "type": "proxy",
+        "tags": ["proxy", "tool"],
+        "shortDescZh": "自动 HTTPS 的现代 Web 服务器",
+        "shortDescEn": "Modern web server with automatic HTTPS",
+        "key": "caddy",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://caddyserver.com",
+        "github": "https://github.com/caddyserver/caddy",
+        "document": "https://caddyserver.com/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.9",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Kong",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Kong",
+        "type": "proxy",
+        "tags": ["proxy", "devops"],
+        "shortDescZh": "API 网关与服务流量管理平台",
+        "shortDescEn": "API gateway and service traffic management platform",
+        "key": "kong",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://konghq.com/kong/",
+        "github": "https://github.com/Kong/kong",
+        "document": "https://docs.konghq.com/gateway/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "3.9",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Keycloak",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Keycloak",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "身份认证与单点登录平台",
+        "shortDescEn": "Identity and single sign-on platform",
+        "key": "keycloak",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.keycloak.org",
+        "github": "https://github.com/keycloak/keycloak",
+        "document": "https://www.keycloak.org/documentation",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "26.1",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Zitadel",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Zitadel",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "现代化身份与访问管理平台",
+        "shortDescEn": "Modern identity and access management platform",
+        "key": "zitadel",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://zitadel.com",
+        "github": "https://github.com/zitadel/zitadel",
+        "document": "https://zitadel.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.66",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Harbor",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "Harbor",
+        "type": "devops",
+        "tags": ["devops", "docker"],
+        "shortDescZh": "企业级容器镜像仓库",
+        "shortDescEn": "Enterprise container image registry",
+        "key": "harbor",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://goharbor.io",
+        "github": "https://github.com/goharbor/harbor",
+        "document": "https://goharbor.io/docs/",
+        "architectures": ["amd64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.12",
+          "lastModified": 1774915200
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "GitLab",
+      "readMe": "",
+      "lastModified": 1774915200,
+      "additionalProperties": {
+        "name": "GitLab",
+        "type": "git",
+        "tags": ["git", "devops"],
+        "shortDescZh": "一体化 Git 代码托管与 DevOps 平台",
+        "shortDescEn": "All-in-one Git hosting and DevOps platform",
+        "key": "gitlab",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://about.gitlab.com",
+        "github": "https://github.com/gitlabhq/gitlabhq",
+        "document": "https://docs.gitlab.com/",
+        "architectures": ["amd64"],
+        "memoryRequired": 4096,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "17.10",
+          "lastModified": 1774915200
+        }
+      ]
     }
   ],
   "additionalProperties": {
@@ -1852,6 +2422,6 @@
       {"key": "docker", "name": "Docker", "sort": 10},
       {"key": "monitoring", "name": "Monitoring", "sort": 11}
     ],
-    "version": "1.3.0"
+    "version": "1.4.0"
   }
 }

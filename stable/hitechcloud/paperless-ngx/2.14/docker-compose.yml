@@ -1,0 +1,38 @@
+version: "3"
+services:
+  paperless-ngx:
+    image: ghcr.io/paperless-ngx/paperless-ngx:2.14.7
+    container_name: ${CONTAINER_NAME:-paperless-ngx}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8011}:8000"
+    environment:
+      PAPERLESS_REDIS: ${PAPERLESS_REDIS:-redis://redis:6379}
+      PAPERLESS_DBHOST: ${PAPERLESS_DBHOST:-postgresql}
+      PAPERLESS_DBUSER: ${PAPERLESS_DBUSER:-paperless}
+      PAPERLESS_DBPASS: ${PAPERLESS_DBPASS:-paperless}
+      PAPERLESS_DBNAME: ${PAPERLESS_DBNAME:-paperless}
+      PAPERLESS_URL: ${PAPERLESS_URL:-http://localhost:8011}
+    volumes:
+      - paperless_data:/usr/src/paperless/data
+      - paperless_media:/usr/src/paperless/media
+      - paperless_export:/usr/src/paperless/export
+      - paperless_consume:/usr/src/paperless/consume
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /usr/src/paperless/data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  paperless_data:
+  paperless_media:
+  paperless_export:
+  paperless_consume:
+
+networks:
+  tinohost-network:
+    external: true

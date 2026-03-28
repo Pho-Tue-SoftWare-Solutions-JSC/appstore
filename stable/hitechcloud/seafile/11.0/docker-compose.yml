@@ -1,0 +1,31 @@
+version: "3"
+services:
+  seafile:
+    image: seafileltd/seafile-mc:11.0-latest
+    container_name: ${CONTAINER_NAME:-seafile}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8080}:80"
+    environment:
+      DB_HOST: ${DB_HOST:-mariadb}
+      DB_ROOT_PASSWD: ${DB_ROOT_PASSWD:-rootpass}
+      SEAFILE_ADMIN_EMAIL: ${SEAFILE_ADMIN_EMAIL:-admin@example.com}
+      SEAFILE_ADMIN_PASSWORD: ${SEAFILE_ADMIN_PASSWORD:-seafile123}
+      SEAFILE_SERVER_HOSTNAME: ${SEAFILE_SERVER_HOSTNAME:-localhost:8080}
+    volumes:
+      - seafile_data:/shared
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /shared || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  seafile_data:
+
+networks:
+  tinohost-network:
+    external: true

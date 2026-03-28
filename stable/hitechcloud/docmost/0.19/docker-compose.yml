@@ -1,0 +1,30 @@
+version: "3"
+services:
+  docmost:
+    image: docmost/docmost:0.19.2
+    container_name: ${CONTAINER_NAME:-docmost}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3004}:3000"
+    environment:
+      APP_URL: ${APP_URL:-http://localhost:3004}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://docmost:docmost@postgresql:5432/docmost}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      APP_SECRET: ${APP_SECRET:-docmost-secret}
+    volumes:
+      - docmost_storage:/app/data/storage
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  docmost_storage:
+
+networks:
+  tinohost-network:
+    external: true

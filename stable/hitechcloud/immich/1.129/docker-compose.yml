@@ -1,0 +1,32 @@
+version: "3"
+services:
+  immich:
+    image: ghcr.io/immich-app/immich-server:v1.129.0
+    container_name: ${CONTAINER_NAME:-immich}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-2283}:2283"
+    environment:
+      DB_HOSTNAME: ${DB_HOSTNAME:-postgresql}
+      DB_USERNAME: ${DB_USERNAME:-immich}
+      DB_PASSWORD: ${DB_PASSWORD:-immich}
+      DB_DATABASE_NAME: ${DB_DATABASE_NAME:-immich}
+      REDIS_HOSTNAME: ${REDIS_HOSTNAME:-redis}
+      IMMICH_MACHINE_LEARNING_URL: ${IMMICH_MACHINE_LEARNING_URL:-http://immich-machine-learning:3003}
+    volumes:
+      - immich_upload:/usr/src/app/upload
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /usr/src/app/upload || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  immich_upload:
+
+networks:
+  tinohost-network:
+    external: true

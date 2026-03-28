@@ -1,0 +1,29 @@
+version: "3"
+services:
+  vaultwarden:
+    image: vaultwarden/server:1.32.5
+    container_name: ${CONTAINER_NAME:-vaultwarden}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8222}:80"
+    environment:
+      DOMAIN: ${DOMAIN:-http://localhost:8222}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-vaultwarden-admin-token}
+      SIGNUPS_ALLOWED: ${SIGNUPS_ALLOWED:-false}
+    volumes:
+      - vaultwarden_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  vaultwarden_data:
+
+networks:
+  tinohost-network:
+    external: true

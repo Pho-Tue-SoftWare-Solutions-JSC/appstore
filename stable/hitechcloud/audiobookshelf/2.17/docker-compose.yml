@@ -1,0 +1,29 @@
+version: "3"
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:2.17.7
+    container_name: ${CONTAINER_NAME:-audiobookshelf}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-13378}:80"
+    volumes:
+      - audiobookshelf_config:/config
+      - audiobookshelf_metadata:/metadata
+      - audiobookshelf_media:/audiobooks
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /config || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  audiobookshelf_config:
+  audiobookshelf_metadata:
+  audiobookshelf_media:
+
+networks:
+  tinohost-network:
+    external: true

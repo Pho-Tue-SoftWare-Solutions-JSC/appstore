@@ -1,0 +1,32 @@
+version: "3"
+services:
+  photoprism:
+    image: photoprism/photoprism:240915
+    container_name: ${CONTAINER_NAME:-photoprism}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-2342}:2342"
+    environment:
+      PHOTOPRISM_ADMIN_USER: ${PHOTOPRISM_ADMIN_USER:-admin}
+      PHOTOPRISM_ADMIN_PASSWORD: ${PHOTOPRISM_ADMIN_PASSWORD:-photoprism123}
+      PHOTOPRISM_SITE_URL: ${PHOTOPRISM_SITE_URL:-http://localhost:2342}
+      PHOTOPRISM_ORIGINALS_LIMIT: ${PHOTOPRISM_ORIGINALS_LIMIT:-5000}
+    volumes:
+      - photoprism_storage:/photoprism/storage
+      - photoprism_originals:/photoprism/originals
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /photoprism/storage || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  photoprism_storage:
+  photoprism_originals:
+
+networks:
+  tinohost-network:
+    external: true

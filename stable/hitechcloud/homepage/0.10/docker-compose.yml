@@ -1,0 +1,30 @@
+version: "3"
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:v0.10.9
+    container_name: ${CONTAINER_NAME:-homepage}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3001}:3000"
+    environment:
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
+      TZ: ${TZ:-UTC}
+    volumes:
+      - homepage_config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /app/config || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  homepage_config:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,31 @@
+version: "3"
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:0.6.24
+    container_name: ${CONTAINER_NAME:-calibre-web}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8083}:8083"
+    environment:
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
+      TZ: ${TZ:-UTC}
+    volumes:
+      - calibre_web_config:/config
+      - calibre_web_books:/books
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /config || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  calibre_web_config:
+  calibre_web_books:
+
+networks:
+  tinohost-network:
+    external: true

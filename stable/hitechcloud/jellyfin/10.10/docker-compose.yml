@@ -1,0 +1,31 @@
+version: "3"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:10.10.7
+    container_name: ${CONTAINER_NAME:-jellyfin}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8096}:8096"
+    environment:
+      JELLYFIN_PublishedServerUrl: ${JELLYFIN_PublishedServerUrl:-http://localhost:8096}
+    volumes:
+      - jellyfin_config:/config
+      - jellyfin_cache:/cache
+      - jellyfin_media:/media
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /config || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  jellyfin_config:
+  jellyfin_cache:
+  jellyfin_media:
+
+networks:
+  tinohost-network:
+    external: true
