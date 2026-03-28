@@ -1,0 +1,33 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: ${CONTAINER_NAME:-mariadb}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3306}:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-rootpassword}
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-default}
+      MARIADB_USER: ${MARIADB_USER:-user}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-password}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - mariadb_conf:/etc/mysql/conf.d
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  mariadb_data:
+  mariadb_conf:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,30 @@
+version: "3"
+services:
+  wordpress:
+    image: wordpress:6.7
+    container_name: ${CONTAINER_NAME:-wordpress}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8080}:80"
+    environment:
+      WORDPRESS_DB_HOST: ${DB_HOST:-mysql}
+      WORDPRESS_DB_USER: ${DB_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${DB_NAME:-wordpress}
+    volumes:
+      - wp_data:/var/www/html
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  wp_data:
+
+networks:
+  tinohost-network:
+    external: true

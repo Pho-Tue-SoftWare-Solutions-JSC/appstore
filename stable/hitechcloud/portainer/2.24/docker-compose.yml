@@ -1,0 +1,27 @@
+version: "3"
+services:
+  portainer:
+    image: portainer/portainer-ce:2.24.0
+    container_name: ${CONTAINER_NAME:-portainer}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-9000}:9000"
+      - "${HTTPS_PORT:-9443}:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    healthcheck:
+      test: ["CMD", "/docker", "container", "top", "portainer"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  portainer_data:
+
+networks:
+  tinohost-network:
+    external: true
