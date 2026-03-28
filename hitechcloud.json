@@ -1,0 +1,447 @@
+{
+  "valid": true,
+  "violations": [],
+  "lastModified": 1711584000,
+  "apps": [
+    {
+      "icon": "",
+      "name": "WordPress",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "WordPress",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "开源内容管理系统",
+        "shortDescEn": "Open-source content management system",
+        "key": "wordpress",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 10,
+        "website": "https://wordpress.org",
+        "github": "https://github.com/WordPress/WordPress",
+        "document": "https://developer.wordpress.org",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "6.7",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "MySQL",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "MySQL",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "开源关系型数据库管理系统",
+        "shortDescEn": "Open-source relational database management system",
+        "key": "mysql",
+        "Required": ["docker"],
+        "crossVersionUpdate": false,
+        "limit": 0,
+        "recommend": 9,
+        "website": "https://www.mysql.com",
+        "github": "https://github.com/mysql/mysql-server",
+        "document": "https://dev.mysql.com/doc",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.0",
+          "lastModified": 1711584000
+        },
+        {
+          "name": "5.7",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "MariaDB",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "MariaDB",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "MySQL的开源分支数据库",
+        "shortDescEn": "Community-developed fork of MySQL relational database",
+        "key": "mariadb",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://mariadb.org",
+        "github": "https://github.com/MariaDB/server",
+        "document": "https://mariadb.com/kb",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "11.4",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Redis",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Redis",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "高性能键值存储数据库",
+        "shortDescEn": "In-memory data structure store and cache",
+        "key": "redis",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://redis.io",
+        "github": "https://github.com/redis/redis",
+        "document": "https://redis.io/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 128,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "7.4",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "phpMyAdmin",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "phpMyAdmin",
+        "type": "tool",
+        "tags": ["database", "tool"],
+        "shortDescZh": "基于Web的MySQL数据库管理工具",
+        "shortDescEn": "Web-based MySQL database administration tool",
+        "key": "phpmyadmin",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://www.phpmyadmin.net",
+        "github": "https://github.com/phpmyadmin/phpmyadmin",
+        "document": "https://docs.phpmyadmin.net",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 128,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5.2",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Nginx Proxy Manager",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Nginx Proxy Manager",
+        "type": "tool",
+        "tags": ["tool", "proxy"],
+        "shortDescZh": "Nginx反向代理管理面板",
+        "shortDescEn": "Easy-to-use reverse proxy management with SSL support",
+        "key": "nginx-proxy-manager",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 9,
+        "website": "https://nginxproxymanager.com",
+        "github": "https://github.com/NginxProxyManager/nginx-proxy-manager",
+        "document": "https://nginxproxymanager.com/guide",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.12",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "PostgreSQL",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "PostgreSQL",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "强大的开源对象关系型数据库",
+        "shortDescEn": "Powerful open-source object-relational database",
+        "key": "postgresql",
+        "Required": ["docker"],
+        "crossVersionUpdate": false,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://www.postgresql.org",
+        "github": "https://github.com/postgres/postgres",
+        "document": "https://www.postgresql.org/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "17",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "MongoDB",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "MongoDB",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "面向文档的NoSQL数据库",
+        "shortDescEn": "Document-oriented NoSQL database",
+        "key": "mongodb",
+        "Required": ["docker"],
+        "crossVersionUpdate": false,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://www.mongodb.com",
+        "github": "https://github.com/mongodb/mongo",
+        "document": "https://www.mongodb.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.0",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Memcached",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Memcached",
+        "type": "database",
+        "tags": ["database"],
+        "shortDescZh": "高性能分布式内存缓存系统",
+        "shortDescEn": "High-performance distributed memory caching system",
+        "key": "memcached",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 6,
+        "website": "https://memcached.org",
+        "github": "https://github.com/memcached/memcached",
+        "document": "https://github.com/memcached/memcached/wiki",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 64,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.6",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Node.js",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Node.js",
+        "type": "runtime",
+        "tags": ["runtime"],
+        "shortDescZh": "基于Chrome V8的JavaScript运行时",
+        "shortDescEn": "JavaScript runtime built on Chrome V8 engine",
+        "key": "node",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://nodejs.org",
+        "github": "https://github.com/nodejs/node",
+        "document": "https://nodejs.org/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "22",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Gitea",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Gitea",
+        "type": "devops",
+        "tags": ["devops", "git"],
+        "shortDescZh": "轻量级自托管Git服务",
+        "shortDescEn": "Lightweight self-hosted Git service",
+        "key": "gitea",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 7,
+        "website": "https://gitea.io",
+        "github": "https://github.com/go-gitea/gitea",
+        "document": "https://docs.gitea.com",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.22",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "MinIO",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "MinIO",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "高性能S3兼容对象存储",
+        "shortDescEn": "High-performance S3-compatible object storage",
+        "key": "minio",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://min.io",
+        "github": "https://github.com/minio/minio",
+        "document": "https://min.io/docs/minio/linux",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "latest",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Portainer",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Portainer",
+        "type": "devops",
+        "tags": ["devops", "docker"],
+        "shortDescZh": "Docker容器管理面板",
+        "shortDescEn": "Lightweight Docker management UI",
+        "key": "portainer",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.portainer.io",
+        "github": "https://github.com/portainer/portainer",
+        "document": "https://docs.portainer.io",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.24",
+          "lastModified": 1711584000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Uptime Kuma",
+      "readMe": "",
+      "lastModified": 1711584000,
+      "additionalProperties": {
+        "name": "Uptime Kuma",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "简洁美观的自托管监控工具",
+        "shortDescEn": "Self-hosted monitoring tool with beautiful UI",
+        "key": "uptime-kuma",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://uptime.kuma.pet",
+        "github": "https://github.com/louislam/uptime-kuma",
+        "document": "https://github.com/louislam/uptime-kuma/wiki",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.23",
+          "lastModified": 1711584000
+        }
+      ]
+    }
+  ],
+  "additionalProperties": {
+    "tags": [
+      {"key": "website", "name": "Website", "sort": 1},
+      {"key": "cms", "name": "CMS", "sort": 2},
+      {"key": "database", "name": "Database", "sort": 3},
+      {"key": "tool", "name": "Tool", "sort": 4},
+      {"key": "runtime", "name": "Runtime", "sort": 5},
+      {"key": "devops", "name": "DevOps", "sort": 6},
+      {"key": "proxy", "name": "Proxy", "sort": 7},
+      {"key": "git", "name": "Git", "sort": 8},
+      {"key": "storage", "name": "Storage", "sort": 9},
+      {"key": "docker", "name": "Docker", "sort": 10},
+      {"key": "monitoring", "name": "Monitoring", "sort": 11}
+    ],
+    "version": "1.0.0"
+  }
+}
