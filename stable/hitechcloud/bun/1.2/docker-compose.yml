@@ -1,0 +1,29 @@
+version: "3"
+services:
+  bun:
+    image: oven/bun:1.2
+    container_name: ${CONTAINER_NAME:-bun}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3003}:3000"
+    working_dir: /app
+    environment:
+      APP_PORT: ${APP_PORT:-3000}
+    volumes:
+      - bun_app:/app
+    command: sh -c "bunx --yes http-server . -p ${APP_PORT:-3000}"
+    healthcheck:
+      test: ["CMD", "bun", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - tinohost-network
+
+volumes:
+  bun_app:
+
+networks:
+  tinohost-network:
+    external: true

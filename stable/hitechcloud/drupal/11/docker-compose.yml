@@ -1,0 +1,31 @@
+version: "3"
+services:
+  drupal:
+    image: drupal:11-apache
+    container_name: ${CONTAINER_NAME:-drupal}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8082}:80"
+    environment:
+      DRUPAL_DB_HOST: ${DB_HOST:-mysql}
+      DRUPAL_DB_NAME: ${DB_NAME:-drupal}
+      DRUPAL_DB_USER: ${DB_USER:-drupal}
+      DRUPAL_DB_PASSWORD: ${DB_PASSWORD:-drupal}
+      PHP_MEMORY_LIMIT: ${PHP_MEMORY_LIMIT:-256M}
+    volumes:
+      - drupal_data:/var/www/html
+    healthcheck:
+      test: ["CMD-SHELL", "php -v >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  drupal_data:
+
+networks:
+  tinohost-network:
+    external: true

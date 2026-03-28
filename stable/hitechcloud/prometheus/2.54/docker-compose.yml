@@ -1,0 +1,30 @@
+version: "3"
+services:
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    container_name: ${CONTAINER_NAME:-prometheus}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-9090}:9090"
+    volumes:
+      - prometheus_data:/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.enable-lifecycle"
+    healthcheck:
+      test: ["CMD-SHELL", "prometheus --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  prometheus_data:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,32 @@
+version: "3"
+services:
+  weaviate:
+    image: semitechnologies/weaviate:1.28.2
+    container_name: ${CONTAINER_NAME:-weaviate}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8089}:8080"
+      - "${GRPC_PORT:-50051}:50051"
+    environment:
+      QUERY_DEFAULTS_LIMIT: ${QUERY_DEFAULTS_LIMIT:-25}
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED:-true}
+      PERSISTENCE_DATA_PATH: ${PERSISTENCE_DATA_PATH:-/var/lib/weaviate}
+      DEFAULT_VECTORIZER_MODULE: ${DEFAULT_VECTORIZER_MODULE:-none}
+      CLUSTER_HOSTNAME: ${CLUSTER_HOSTNAME:-node1}
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /var/lib/weaviate || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  weaviate_data:
+
+networks:
+  tinohost-network:
+    external: true

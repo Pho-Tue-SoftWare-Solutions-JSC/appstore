@@ -1,0 +1,28 @@
+version: "3"
+services:
+  syncthing:
+    image: syncthing/syncthing:1.29.5
+    container_name: ${CONTAINER_NAME:-syncthing}
+    restart: unless-stopped
+    ports:
+      - "${GUI_PORT:-8384}:8384"
+      - "${SYNC_PORT:-22000}:22000/tcp"
+      - "${SYNC_PORT:-22000}:22000/udp"
+      - "${DISCOVERY_PORT:-21027}:21027/udp"
+    volumes:
+      - syncthing_data:/var/syncthing
+    healthcheck:
+      test: ["CMD-SHELL", "syncthing --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  syncthing_data:
+
+networks:
+  tinohost-network:
+    external: true

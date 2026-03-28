@@ -1,0 +1,29 @@
+version: "3"
+services:
+  openhands:
+    image: docker.all-hands.dev/all-hands-ai/openhands:0.28
+    container_name: ${CONTAINER_NAME:-openhands}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3008}:3000"
+    environment:
+      SANDBOX_RUNTIME_CONTAINER_IMAGE: ${SANDBOX_RUNTIME_CONTAINER_IMAGE:-docker.all-hands.dev/all-hands-ai/runtime:0.28-nikolaik}
+      LOG_ALL_EVENTS: ${LOG_ALL_EVENTS:-false}
+    volumes:
+      - openhands_state:/app/.openhands-state
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD-SHELL", "python --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  openhands_state:
+
+networks:
+  tinohost-network:
+    external: true

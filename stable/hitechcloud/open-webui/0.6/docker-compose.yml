@@ -1,0 +1,28 @@
+version: "3"
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: ${CONTAINER_NAME:-open-webui}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3003}:8080"
+    environment:
+      WEBUI_SECRET_KEY: ${WEBUI_SECRET_KEY:-openwebui-secret}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+    volumes:
+      - open_webui_data:/app/backend/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /app/backend || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  open_webui_data:
+
+networks:
+  tinohost-network:
+    external: true

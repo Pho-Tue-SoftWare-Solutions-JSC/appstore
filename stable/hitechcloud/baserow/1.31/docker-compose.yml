@@ -1,0 +1,28 @@
+version: "3"
+services:
+  baserow:
+    image: baserow/baserow:1.31.1
+    container_name: ${CONTAINER_NAME:-baserow}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3010}:80"
+    environment:
+      BASEROW_PUBLIC_URL: ${BASEROW_PUBLIC_URL:-http://localhost:3010}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:///baserow/data.db}
+    volumes:
+      - baserow_data:/baserow/data
+    healthcheck:
+      test: ["CMD-SHELL", "python --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  baserow_data:
+
+networks:
+  tinohost-network:
+    external: true

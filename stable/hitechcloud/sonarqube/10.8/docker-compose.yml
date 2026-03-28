@@ -1,0 +1,31 @@
+version: "3"
+services:
+  sonarqube:
+    image: sonarqube:10.8-community
+    container_name: ${CONTAINER_NAME:-sonarqube}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-9000}:9000"
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: ${SONAR_ES_BOOTSTRAP_CHECKS_DISABLE:-true}
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /opt/sonarqube || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - tinohost-network
+
+volumes:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
+
+networks:
+  tinohost-network:
+    external: true

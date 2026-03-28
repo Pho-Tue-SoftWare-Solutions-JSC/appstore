@@ -1,0 +1,30 @@
+version: "3"
+services:
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    container_name: ${CONTAINER_NAME:-litellm}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-4000}:4000"
+    environment:
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:-litellm-master-key}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:///data/litellm.db}
+      STORE_MODEL_IN_DB: ${STORE_MODEL_IN_DB:-true}
+    volumes:
+      - litellm_data:/data
+    command: ["--port", "4000", "--config", "/data/config.yaml"]
+    healthcheck:
+      test: ["CMD-SHELL", "python --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  litellm_data:
+
+networks:
+  tinohost-network:
+    external: true

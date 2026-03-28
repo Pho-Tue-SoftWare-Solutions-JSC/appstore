@@ -1,0 +1,28 @@
+version: "3"
+services:
+  windmill:
+    image: ghcr.io/windmill-labs/windmill:1.417.2
+    container_name: ${CONTAINER_NAME:-windmill}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8002}:8000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:///tmp/windmill.db}
+      BASE_URL: ${BASE_URL:-http://localhost:8002}
+    volumes:
+      - windmill_data:/tmp
+    healthcheck:
+      test: ["CMD-SHELL", "deno --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  windmill_data:
+
+networks:
+  tinohost-network:
+    external: true

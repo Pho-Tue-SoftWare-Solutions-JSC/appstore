@@ -1,0 +1,30 @@
+version: "3"
+services:
+  python:
+    image: python:3.12-alpine
+    container_name: ${CONTAINER_NAME:-python}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+    working_dir: /app
+    environment:
+      PYTHONUNBUFFERED: ${PYTHONUNBUFFERED:-1}
+      APP_PORT: ${APP_PORT:-8000}
+    volumes:
+      - python_app:/app
+    command: sh -c "python -m http.server ${APP_PORT:-8000}"
+    healthcheck:
+      test: ["CMD-SHELL", "python --version >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - tinohost-network
+
+volumes:
+  python_app:
+
+networks:
+  tinohost-network:
+    external: true

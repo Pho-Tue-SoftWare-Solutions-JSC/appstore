@@ -1,0 +1,32 @@
+version: "3"
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:v2.31.2
+    container_name: ${CONTAINER_NAME:-filebrowser}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8088}:80"
+    volumes:
+      - filebrowser_srv:/srv
+      - filebrowser_db:/database
+    command:
+      - --root
+      - /srv
+      - --database
+      - /database/filebrowser.db
+    healthcheck:
+      test: ["CMD-SHELL", "filebrowser version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  filebrowser_srv:
+  filebrowser_db:
+
+networks:
+  tinohost-network:
+    external: true

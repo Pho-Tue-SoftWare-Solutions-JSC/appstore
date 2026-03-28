@@ -1,0 +1,31 @@
+version: "3"
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:25.1
+    container_name: ${CONTAINER_NAME:-clickhouse}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8123}:8123"
+      - "${NATIVE_PORT:-9000}:9000"
+    environment:
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB:-default}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:-default}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:-clickhouse123}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: ${CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT:-1}
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    healthcheck:
+      test: ["CMD-SHELL", "clickhouse-client --query 'SELECT 1' >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  clickhouse_data:
+
+networks:
+  tinohost-network:
+    external: true

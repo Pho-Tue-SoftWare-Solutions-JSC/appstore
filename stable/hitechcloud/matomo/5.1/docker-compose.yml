@@ -1,0 +1,30 @@
+version: "3"
+services:
+  matomo:
+    image: matomo:5.1-apache
+    container_name: ${CONTAINER_NAME:-matomo}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8041}:80"
+    environment:
+      MATOMO_DATABASE_HOST: ${MATOMO_DATABASE_HOST:-mysql}
+      MATOMO_DATABASE_USERNAME: ${MATOMO_DATABASE_USERNAME:-matomo}
+      MATOMO_DATABASE_PASSWORD: ${MATOMO_DATABASE_PASSWORD:-matomo}
+      MATOMO_DATABASE_DBNAME: ${MATOMO_DATABASE_DBNAME:-matomo}
+    volumes:
+      - matomo_data:/var/www/html
+    healthcheck:
+      test: ["CMD-SHELL", "php -v >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  matomo_data:
+
+networks:
+  tinohost-network:
+    external: true

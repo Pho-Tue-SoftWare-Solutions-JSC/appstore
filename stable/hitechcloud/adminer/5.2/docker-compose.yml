@@ -1,0 +1,23 @@
+version: "3"
+services:
+  adminer:
+    image: adminer:5.2.1
+    container_name: ${CONTAINER_NAME:-adminer}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8081}:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: ${ADMINER_DEFAULT_SERVER:-mysql}
+      ADMINER_DESIGN: ${ADMINER_DESIGN:-pepa-linha}
+    healthcheck:
+      test: ["CMD-SHELL", "php -v >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

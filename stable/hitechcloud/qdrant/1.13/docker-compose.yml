@@ -1,0 +1,26 @@
+version: "3"
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.13.4
+    container_name: ${CONTAINER_NAME:-qdrant}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-6333}:6333"
+      - "${GRPC_PORT:-6334}:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /qdrant/storage || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  qdrant_data:
+
+networks:
+  tinohost-network:
+    external: true

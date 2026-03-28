@@ -1,0 +1,29 @@
+version: "3"
+services:
+  jenkins:
+    image: jenkins/jenkins:2.479.3-lts-jdk17
+    container_name: ${CONTAINER_NAME:-jenkins}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8085}:8080"
+      - "${AGENT_PORT:-50000}:50000"
+    environment:
+      JAVA_OPTS: ${JAVA_OPTS:--Djenkins.install.runSetupWizard=false}
+      JENKINS_OPTS: ${JENKINS_OPTS:---httpPort=8080}
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    healthcheck:
+      test: ["CMD-SHELL", "java -version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - tinohost-network
+
+volumes:
+  jenkins_home:
+
+networks:
+  tinohost-network:
+    external: true

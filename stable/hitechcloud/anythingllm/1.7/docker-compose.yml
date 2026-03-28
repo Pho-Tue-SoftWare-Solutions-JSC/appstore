@@ -1,0 +1,28 @@
+version: "3"
+services:
+  anythingllm:
+    image: mintplexlabs/anythingllm:1.7.7
+    container_name: ${CONTAINER_NAME:-anythingllm}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3006}:3001"
+    environment:
+      STORAGE_DIR: ${STORAGE_DIR:-/app/server/storage}
+      JWT_SECRET: ${JWT_SECRET:-anythingllm-secret}
+    volumes:
+      - anythingllm_storage:/app/server/storage
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  anythingllm_storage:
+
+networks:
+  tinohost-network:
+    external: true

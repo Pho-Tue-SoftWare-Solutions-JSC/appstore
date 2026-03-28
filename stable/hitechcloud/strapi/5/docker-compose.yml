@@ -1,0 +1,31 @@
+version: "3"
+services:
+  strapi:
+    image: strapi/strapi:5.10.3
+    container_name: ${CONTAINER_NAME:-strapi}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-1337}:1337"
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      APP_KEYS: ${APP_KEYS:-appKey1,appKey2}
+      API_TOKEN_SALT: ${API_TOKEN_SALT:-api-token-salt}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET:-admin-jwt-secret}
+      TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT:-transfer-token-salt}
+    volumes:
+      - strapi_app:/opt/app
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  strapi_app:
+
+networks:
+  tinohost-network:
+    external: true

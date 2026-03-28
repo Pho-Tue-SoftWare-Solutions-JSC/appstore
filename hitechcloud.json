@@ -1,7 +1,7 @@
 {
   "valid": true,
   "violations": [],
-  "lastModified": 1711584000,
+  "lastModified": 1774742400,
   "apps": [
     {
       "icon": "",
@@ -426,6 +426,636 @@
           "lastModified": 1711584000
         }
       ]
+    },
+    {
+      "icon": "",
+      "name": "Adminer",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Adminer",
+        "type": "tool",
+        "tags": ["database", "tool"],
+        "shortDescZh": "轻量级数据库管理工具",
+        "shortDescEn": "Lightweight database management tool",
+        "key": "adminer",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://www.adminer.org",
+        "github": "https://github.com/vrana/adminer",
+        "document": "https://www.adminer.org/en/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 128,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5.2",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "pgAdmin",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "pgAdmin",
+        "type": "tool",
+        "tags": ["database", "tool"],
+        "shortDescZh": "PostgreSQL 图形化管理工具",
+        "shortDescEn": "Web-based PostgreSQL administration tool",
+        "key": "pgadmin",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://www.pgadmin.org",
+        "github": "https://github.com/pgadmin-org/pgadmin4",
+        "document": "https://www.pgadmin.org/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.14",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Drupal",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Drupal",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "企业级开源内容管理系统",
+        "shortDescEn": "Enterprise-ready open-source content management system",
+        "key": "drupal",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://www.drupal.org",
+        "github": "https://github.com/drupal/drupal",
+        "document": "https://www.drupal.org/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "11",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Ghost",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Ghost",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "现代化发布平台与博客系统",
+        "shortDescEn": "Modern publishing platform and blogging CMS",
+        "key": "ghost",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://ghost.org",
+        "github": "https://github.com/TryGhost/Ghost",
+        "document": "https://ghost.org/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Python",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Python",
+        "type": "runtime",
+        "tags": ["runtime"],
+        "shortDescZh": "通用高级编程语言运行时",
+        "shortDescEn": "General-purpose high-level programming language runtime",
+        "key": "python",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://www.python.org",
+        "github": "https://github.com/python/cpython",
+        "document": "https://docs.python.org/3/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "3.12",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Deno",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Deno",
+        "type": "runtime",
+        "tags": ["runtime"],
+        "shortDescZh": "现代 JavaScript 与 TypeScript 运行时",
+        "shortDescEn": "Modern JavaScript and TypeScript runtime",
+        "key": "deno",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://deno.com",
+        "github": "https://github.com/denoland/deno",
+        "document": "https://docs.deno.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Grafana",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Grafana",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "可视化监控与仪表盘平台",
+        "shortDescEn": "Visualization and observability dashboard platform",
+        "key": "grafana",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 9,
+        "website": "https://grafana.com",
+        "github": "https://github.com/grafana/grafana",
+        "document": "https://grafana.com/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "11.5",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Prometheus",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Prometheus",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "开源监控与告警工具包",
+        "shortDescEn": "Open-source monitoring and alerting toolkit",
+        "key": "prometheus",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 9,
+        "website": "https://prometheus.io",
+        "github": "https://github.com/prometheus/prometheus",
+        "document": "https://prometheus.io/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.54",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Jenkins",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Jenkins",
+        "type": "devops",
+        "tags": ["devops"],
+        "shortDescZh": "流行的持续集成与持续交付平台",
+        "shortDescEn": "Popular continuous integration and delivery platform",
+        "key": "jenkins",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.jenkins.io",
+        "github": "https://github.com/jenkinsci/jenkins",
+        "document": "https://www.jenkins.io/doc/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.479",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "SonarQube",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "SonarQube",
+        "type": "devops",
+        "tags": ["devops", "tool"],
+        "shortDescZh": "代码质量与安全分析平台",
+        "shortDescEn": "Code quality and security analysis platform",
+        "key": "sonarqube",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.sonarsource.com/products/sonarqube/",
+        "github": "https://github.com/SonarSource/sonarqube",
+        "document": "https://docs.sonarsource.com/sonarqube-server/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "10.8",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Nextcloud",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Nextcloud",
+        "type": "tool",
+        "tags": ["tool", "storage"],
+        "shortDescZh": "自托管文件同步与协作平台",
+        "shortDescEn": "Self-hosted file sync and collaboration platform",
+        "key": "nextcloud",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://nextcloud.com",
+        "github": "https://github.com/nextcloud/server",
+        "document": "https://docs.nextcloud.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "30",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "RabbitMQ",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "RabbitMQ",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "流行的消息代理与队列系统",
+        "shortDescEn": "Popular message broker and queueing system",
+        "key": "rabbitmq",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://www.rabbitmq.com",
+        "github": "https://github.com/rabbitmq/rabbitmq-server",
+        "document": "https://www.rabbitmq.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "4.0",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Elasticsearch",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Elasticsearch",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "分布式搜索与分析引擎",
+        "shortDescEn": "Distributed search and analytics engine",
+        "key": "elasticsearch",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://www.elastic.co/elasticsearch",
+        "github": "https://github.com/elastic/elasticsearch",
+        "document": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.17",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Kibana",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Kibana",
+        "type": "tool",
+        "tags": ["tool", "monitoring"],
+        "shortDescZh": "Elastic Stack 的可视化界面",
+        "shortDescEn": "Visualization interface for the Elastic Stack",
+        "key": "kibana",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 7,
+        "website": "https://www.elastic.co/kibana",
+        "github": "https://github.com/elastic/kibana",
+        "document": "https://www.elastic.co/guide/en/kibana/current/index.html",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "8.17",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Meilisearch",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Meilisearch",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "快速且易用的搜索引擎",
+        "shortDescEn": "Fast and developer-friendly search engine",
+        "key": "meilisearch",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 8,
+        "website": "https://www.meilisearch.com",
+        "github": "https://github.com/meilisearch/meilisearch",
+        "document": "https://www.meilisearch.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.12",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "n8n",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "n8n",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "工作流自动化与集成平台",
+        "shortDescEn": "Workflow automation and integration platform",
+        "key": "n8n",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://n8n.io",
+        "github": "https://github.com/n8n-io/n8n",
+        "document": "https://docs.n8n.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.82",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Mailpit",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Mailpit",
+        "type": "tool",
+        "tags": ["tool"],
+        "shortDescZh": "开发环境邮件捕获工具",
+        "shortDescEn": "Email testing and capture tool for development",
+        "key": "mailpit",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://mailpit.axllent.org",
+        "github": "https://github.com/axllent/mailpit",
+        "document": "https://mailpit.axllent.org/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 128,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.21",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Directus",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Directus",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "无头 CMS 与数据平台",
+        "shortDescEn": "Headless CMS and data platform",
+        "key": "directus",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://directus.io",
+        "github": "https://github.com/directus/directus",
+        "document": "https://docs.directus.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "11.4",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Bun",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Bun",
+        "type": "runtime",
+        "tags": ["runtime"],
+        "shortDescZh": "高性能 JavaScript 与 TypeScript 运行时",
+        "shortDescEn": "High-performance JavaScript and TypeScript runtime",
+        "key": "bun",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 0,
+        "recommend": 7,
+        "website": "https://bun.sh",
+        "github": "https://github.com/oven-sh/bun",
+        "document": "https://bun.sh/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.2",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Strapi",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "Strapi",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "流行的无头 CMS",
+        "shortDescEn": "Popular headless CMS platform",
+        "key": "strapi",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://strapi.io",
+        "github": "https://github.com/strapi/strapi",
+        "document": "https://docs.strapi.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5",
+          "lastModified": 1774742400
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "NocoDB",
+      "readMe": "",
+      "lastModified": 1774742400,
+      "additionalProperties": {
+        "name": "NocoDB",
+        "type": "tool",
+        "tags": ["tool", "database"],
+        "shortDescZh": "开源 Airtable 替代方案",
+        "shortDescEn": "Open-source Airtable alternative",
+        "key": "nocodb",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://nocodb.com",
+        "github": "https://github.com/nocodb/nocodb",
+        "document": "https://docs.nocodb.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.262",
+          "lastModified": 1774742400
+        }
+      ]
     }
   ],
   "additionalProperties": {
@@ -442,6 +1072,6 @@
       {"key": "docker", "name": "Docker", "sort": 10},
       {"key": "monitoring", "name": "Monitoring", "sort": 11}
     ],
-    "version": "1.0.0"
+    "version": "1.2.0"
   }
 }

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  plausible:
+    image: ghcr.io/plausible/community-edition:v3.0.1
+    container_name: ${CONTAINER_NAME:-plausible}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8040}:8000"
+    environment:
+      BASE_URL: ${BASE_URL:-http://localhost:8040}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE:-plausible-secret-key}
+      DISABLE_REGISTRATION: ${DISABLE_REGISTRATION:-false}
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /app || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

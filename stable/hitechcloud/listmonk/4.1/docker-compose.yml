@@ -1,0 +1,27 @@
+version: "3"
+services:
+  listmonk:
+    image: listmonk/listmonk:v4.1.0
+    container_name: ${CONTAINER_NAME:-listmonk}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-9001}:9000"
+    environment:
+      LISTMONK_app__address: ${LISTMONK_APP_ADDRESS:-0.0.0.0:9000}
+      LISTMONK_db__host: ${LISTMONK_DB_HOST:-postgresql}
+      LISTMONK_db__port: ${LISTMONK_DB_PORT:-5432}
+      LISTMONK_db__user: ${LISTMONK_DB_USER:-listmonk}
+      LISTMONK_db__password: ${LISTMONK_DB_PASSWORD:-listmonk}
+      LISTMONK_db__database: ${LISTMONK_DB_DATABASE:-listmonk}
+    healthcheck:
+      test: ["CMD-SHELL", "listmonk --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

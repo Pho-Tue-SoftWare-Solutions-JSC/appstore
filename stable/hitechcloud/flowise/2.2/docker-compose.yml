@@ -1,0 +1,29 @@
+version: "3"
+services:
+  flowise:
+    image: flowiseai/flowise:2.2.6
+    container_name: ${CONTAINER_NAME:-flowise}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3005}:3000"
+    environment:
+      PORT: ${PORT:-3000}
+      FLOWISE_USERNAME: ${FLOWISE_USERNAME:-admin}
+      FLOWISE_PASSWORD: ${FLOWISE_PASSWORD:-flowise123}
+    volumes:
+      - flowise_data:/root/.flowise
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+volumes:
+  flowise_data:
+
+networks:
+  tinohost-network:
+    external: true

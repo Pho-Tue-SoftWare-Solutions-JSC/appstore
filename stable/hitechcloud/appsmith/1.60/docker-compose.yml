@@ -1,0 +1,28 @@
+version: "3"
+services:
+  appsmith:
+    image: appsmith/appsmith-ce:v1.60.8
+    container_name: ${CONTAINER_NAME:-appsmith}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8087}:80"
+    environment:
+      APPSMITH_SUPERVISOR_PASSWORD: ${APPSMITH_SUPERVISOR_PASSWORD:-appsmith123}
+      APPSMITH_ENABLE_TELEMETRY: ${APPSMITH_ENABLE_TELEMETRY:-false}
+    volumes:
+      - appsmith_data:/appsmith-stacks
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /appsmith-stacks || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - tinohost-network
+
+volumes:
+  appsmith_data:
+
+networks:
+  tinohost-network:
+    external: true

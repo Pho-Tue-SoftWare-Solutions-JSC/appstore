@@ -1,0 +1,26 @@
+version: "3"
+services:
+  supabase:
+    image: supabase/studio:20250331-5e5586d
+    container_name: ${CONTAINER_NAME:-supabase-studio}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3009}:3000"
+    environment:
+      STUDIO_PG_META_URL: ${STUDIO_PG_META_URL:-http://localhost:8080}
+      SUPABASE_URL: ${SUPABASE_URL:-http://localhost:8000}
+      SUPABASE_PUBLIC_URL: ${SUPABASE_PUBLIC_URL:-http://localhost:3009}
+      DEFAULT_ORGANIZATION_NAME: ${DEFAULT_ORGANIZATION_NAME:-HitechCloud}
+      DEFAULT_PROJECT_NAME: ${DEFAULT_PROJECT_NAME:-AppStore}
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

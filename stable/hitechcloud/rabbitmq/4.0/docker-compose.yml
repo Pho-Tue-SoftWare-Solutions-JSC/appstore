@@ -1,0 +1,30 @@
+version: "3"
+services:
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    container_name: ${CONTAINER_NAME:-rabbitmq}
+    restart: unless-stopped
+    ports:
+      - "${AMQP_PORT:-5672}:5672"
+      - "${MANAGEMENT_PORT:-15672}:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-admin}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-admin123}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_DEFAULT_VHOST:-/}
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD-SHELL", "rabbitmq-diagnostics -q ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  rabbitmq_data:
+
+networks:
+  tinohost-network:
+    external: true

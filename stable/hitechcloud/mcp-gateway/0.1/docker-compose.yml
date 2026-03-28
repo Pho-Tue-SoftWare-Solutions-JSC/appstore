@@ -1,0 +1,23 @@
+version: "3"
+services:
+  mcp-gateway:
+    image: ghcr.io/idosal/mcp-gateway:latest
+    container_name: ${CONTAINER_NAME:-mcp-gateway}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8811}:8811"
+    environment:
+      PORT: ${PORT:-8811}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    healthcheck:
+      test: ["CMD-SHELL", "node --version >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

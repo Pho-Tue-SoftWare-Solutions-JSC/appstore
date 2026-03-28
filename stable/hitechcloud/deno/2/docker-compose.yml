@@ -1,0 +1,29 @@
+version: "3"
+services:
+  deno:
+    image: denoland/deno:2.1.4
+    container_name: ${CONTAINER_NAME:-deno}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8001}:8000"
+    working_dir: /app
+    environment:
+      APP_PORT: ${APP_PORT:-8000}
+    volumes:
+      - deno_app:/app
+    command: run --allow-net --allow-read jsr:@std/http/file-server --port ${APP_PORT:-8000}
+    healthcheck:
+      test: ["CMD", "deno", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - tinohost-network
+
+volumes:
+  deno_app:
+
+networks:
+  tinohost-network:
+    external: true
