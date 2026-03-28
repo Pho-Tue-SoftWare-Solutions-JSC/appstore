@@ -2,7 +2,7 @@
 
 Kho template triển khai ứng dụng bằng Docker Compose cho hệ sinh thái `hitechcloud`.
 
-> Metadata version hiện tại: `1.5.0`
+> Metadata version hiện tại: `1.6.0`
 
 ## Mục lục
 
@@ -202,6 +202,16 @@ Hiện tại repository đang có các ứng dụng sau:
 | Outline | `outline` | Tool / Wiki | `0.78` | Knowledge base cho team |
 | Wiki.js | `wikijs` | Website / CMS / Wiki | `2.5` | Hệ thống wiki hiện đại |
 | Invoice Ninja | `invoice-ninja` | Website / Business | `5.10` | Quản lý hóa đơn và báo giá |
+| Mattermost | `mattermost` | Collaboration / Chat | `10.5` | Nền tảng chat và cộng tác cho team |
+| Rocket.Chat | `rocketchat` | Collaboration / Chat | `7.5` | Team chat mã nguồn mở |
+| Zulip | `zulip` | Collaboration / Chat | `10.0` | Team messaging theo luồng hội thoại |
+| Jitsi | `jitsi` | Collaboration / Video | `stable` | Họp video self-hosted |
+| Gitea Actions Runner | `gitea-actions-runner` | DevOps / CI | `0.2` | Runner cho Gitea Actions |
+| Uptime Kuma Agent | `uptime-kuma-agent` | Monitoring / Tool | `1.0` | Node mẫu cho giám sát Kuma |
+| GlitchTip | `glitchtip` | Monitoring / Error Tracking | `4.0` | Theo dõi lỗi và exception |
+| SigNoz | `signoz` | Monitoring / Observability | `0.71` | Observability platform mã nguồn mở |
+| PostHog | `posthog` | Analytics / Monitoring | `1.149` | Product analytics và event tracking |
+| Cal.com | `calcom` | Tool / Scheduling | `5.4` | Nền tảng đặt lịch và booking |
 
 ## Quy ước chung của template
 

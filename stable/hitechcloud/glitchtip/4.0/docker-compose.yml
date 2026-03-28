@@ -1,0 +1,32 @@
+version: "3"
+services:
+  glitchtip:
+    image: glitchtip/glitchtip:4.0.4
+    container_name: ${CONTAINER_NAME:-glitchtip}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8001}:8000"
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-glitchtip-secret-key}
+      DATABASE_URL: ${DATABASE_URL:-postgres://glitchtip:glitchtip@postgresql:5432/glitchtip}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      PORT: 8000
+      EMAIL_URL: ${EMAIL_URL:-consolemail://}
+      GLITCHTIP_DOMAIN: ${GLITCHTIP_DOMAIN:-http://localhost:8001}
+    volumes:
+      - glitchtip_uploads:/code/uploads
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /code/uploads || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  glitchtip_uploads:
+
+networks:
+  tinohost-network:
+    external: true

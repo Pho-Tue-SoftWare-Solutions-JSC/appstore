@@ -1,0 +1,28 @@
+version: "3"
+services:
+  gitea-actions-runner:
+    image: gitea/act_runner:0.2.11
+    container_name: ${CONTAINER_NAME:-gitea-actions-runner}
+    restart: unless-stopped
+    environment:
+      GITEA_INSTANCE_URL: ${GITEA_INSTANCE_URL:-http://gitea:3000}
+      GITEA_RUNNER_REGISTRATION_TOKEN: ${GITEA_RUNNER_REGISTRATION_TOKEN:-change-me}
+      GITEA_RUNNER_NAME: ${GITEA_RUNNER_NAME:-runner-01}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - gitea_runner_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  gitea_runner_data:
+
+networks:
+  tinohost-network:
+    external: true

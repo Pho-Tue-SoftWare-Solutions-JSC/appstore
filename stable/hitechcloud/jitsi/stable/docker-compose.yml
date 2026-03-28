@@ -1,0 +1,35 @@
+version: "3"
+services:
+  web:
+    image: jitsi/web:stable-9909
+    container_name: ${WEB_CONTAINER_NAME:-jitsi-web}
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8092}:80"
+      - "${HTTPS_PORT:-8446}:443"
+    environment:
+      ENABLE_LETSENCRYPT: ${ENABLE_LETSENCRYPT:-0}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8092}
+    volumes:
+      - jitsi_web:/config
+    networks:
+      - tinohost-network
+
+  prosody:
+    image: jitsi/prosody:stable-9909
+    container_name: ${PROSODY_CONTAINER_NAME:-jitsi-prosody}
+    restart: unless-stopped
+    environment:
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8092}
+    volumes:
+      - jitsi_prosody:/config
+    networks:
+      - tinohost-network
+
+volumes:
+  jitsi_web:
+  jitsi_prosody:
+
+networks:
+  tinohost-network:
+    external: true

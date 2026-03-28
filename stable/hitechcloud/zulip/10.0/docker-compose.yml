@@ -1,0 +1,28 @@
+version: "3"
+services:
+  zulip:
+    image: zulip/docker-zulip:10.0-0
+    container_name: ${CONTAINER_NAME:-zulip}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-9991}:80"
+    environment:
+      SETTING_EXTERNAL_HOST: ${SETTING_EXTERNAL_HOST:-localhost}
+      SETTING_ZULIP_ADMINISTRATOR: ${SETTING_ZULIP_ADMINISTRATOR:-admin@example.com}
+    volumes:
+      - zulip_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - tinohost-network
+
+volumes:
+  zulip_data:
+
+networks:
+  tinohost-network:
+    external: true

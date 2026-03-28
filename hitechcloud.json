@@ -1,7 +1,7 @@
 {
   "valid": true,
   "violations": [],
-  "lastModified": 1775001600,
+  "lastModified": 1775088000,
   "apps": [
     {
       "icon": "",
@@ -2766,6 +2766,306 @@
           "lastModified": 1775001600
         }
       ]
+    },
+    {
+      "icon": "",
+      "name": "Mattermost",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Mattermost",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "团队协作与消息平台",
+        "shortDescEn": "Team collaboration and messaging platform",
+        "key": "mattermost",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://mattermost.com",
+        "github": "https://github.com/mattermost/mattermost",
+        "document": "https://docs.mattermost.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "10.5",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Rocket.Chat",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Rocket.Chat",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "开源团队聊天平台",
+        "shortDescEn": "Open-source team chat platform",
+        "key": "rocketchat",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.rocket.chat",
+        "github": "https://github.com/RocketChat/Rocket.Chat",
+        "document": "https://docs.rocket.chat/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "7.5",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Zulip",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Zulip",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "线程化团队消息协作平台",
+        "shortDescEn": "Threaded team messaging and collaboration platform",
+        "key": "zulip",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://zulip.com",
+        "github": "https://github.com/zulip/zulip",
+        "document": "https://zulip.readthedocs.io/",
+        "architectures": ["amd64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "10.0",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Jitsi",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Jitsi",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "开源视频会议平台",
+        "shortDescEn": "Open-source video conferencing platform",
+        "key": "jitsi",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://jitsi.org/jitsi-meet/",
+        "github": "https://github.com/jitsi/docker-jitsi-meet",
+        "document": "https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "stable",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Gitea Actions Runner",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Gitea Actions Runner",
+        "type": "devops",
+        "tags": ["devops", "git"],
+        "shortDescZh": "Gitea Actions 自托管执行器",
+        "shortDescEn": "Self-hosted runner for Gitea Actions",
+        "key": "gitea-actions-runner",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://docs.gitea.com/usage/actions/overview",
+        "github": "https://github.com/go-gitea/act_runner",
+        "document": "https://docs.gitea.com/usage/actions/act-runner",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.2",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Uptime Kuma Agent",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Uptime Kuma Agent",
+        "type": "monitoring",
+        "tags": ["monitoring", "tool"],
+        "shortDescZh": "Uptime Kuma 监控节点模板",
+        "shortDescEn": "Uptime Kuma monitoring node template",
+        "key": "uptime-kuma-agent",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://github.com/louislam/uptime-kuma",
+        "github": "https://github.com/louislam/uptime-kuma",
+        "document": "https://github.com/louislam/uptime-kuma/wiki",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.0",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "GlitchTip",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "GlitchTip",
+        "type": "monitoring",
+        "tags": ["monitoring", "tool"],
+        "shortDescZh": "开源错误跟踪与事件监控平台",
+        "shortDescEn": "Open-source error tracking and event monitoring platform",
+        "key": "glitchtip",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://glitchtip.com",
+        "github": "https://github.com/glitchtip/glitchtip",
+        "document": "https://glitchtip.com/documentation/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "4.0",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "SigNoz",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "SigNoz",
+        "type": "monitoring",
+        "tags": ["monitoring", "tool"],
+        "shortDescZh": "开源可观测性平台",
+        "shortDescEn": "Open-source observability platform",
+        "key": "signoz",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://signoz.io",
+        "github": "https://github.com/SigNoz/signoz",
+        "document": "https://signoz.io/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.71",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "PostHog",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "PostHog",
+        "type": "monitoring",
+        "tags": ["monitoring", "tool"],
+        "shortDescZh": "产品分析与事件追踪平台",
+        "shortDescEn": "Product analytics and event tracking platform",
+        "key": "posthog",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://posthog.com",
+        "github": "https://github.com/PostHog/posthog",
+        "document": "https://posthog.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.149",
+          "lastModified": 1775088000
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Cal.com",
+      "readMe": "",
+      "lastModified": 1775088000,
+      "additionalProperties": {
+        "name": "Cal.com",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "开源日程预约与排班平台",
+        "shortDescEn": "Open-source scheduling and booking platform",
+        "key": "calcom",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://cal.com",
+        "github": "https://github.com/calcom/cal.com",
+        "document": "https://cal.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5.4",
+          "lastModified": 1775088000
+        }
+      ]
     }
   ],
   "additionalProperties": {
@@ -2782,6 +3082,6 @@
       {"key": "docker", "name": "Docker", "sort": 10},
       {"key": "monitoring", "name": "Monitoring", "sort": 11}
     ],
-    "version": "1.5.0"
+    "version": "1.6.0"
   }
 }
