@@ -1,0 +1,23 @@
+version: "3"
+services:
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:2.19.0
+    container_name: ${CONTAINER_NAME:-opensearch-dashboards}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-5601}:5601"
+    environment:
+      OPENSEARCH_HOSTS: ${OPENSEARCH_HOSTS:-["http://opensearch:9200"]}
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: ${DISABLE_SECURITY_DASHBOARDS_PLUGIN:-true}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:5601 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

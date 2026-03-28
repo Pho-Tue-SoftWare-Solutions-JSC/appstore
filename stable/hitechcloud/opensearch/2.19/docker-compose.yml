@@ -1,0 +1,35 @@
+version: "3"
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.19.0
+    container_name: ${CONTAINER_NAME:-opensearch}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-9200}:9200"
+      - "${TRANSPORT_PORT:-9600}:9600"
+    environment:
+      discovery.type: single-node
+      bootstrap.memory_lock: "true"
+      OPENSEARCH_JAVA_OPTS: ${OPENSEARCH_JAVA_OPTS:--Xms512m -Xmx512m}
+      plugins.security.disabled: ${PLUGINS_SECURITY_DISABLED:-true}
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - opensearch_data:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /usr/share/opensearch/data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  opensearch_data:
+
+networks:
+  tinohost-network:
+    external: true

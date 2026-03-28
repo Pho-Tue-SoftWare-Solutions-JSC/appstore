@@ -1,0 +1,33 @@
+version: "3"
+services:
+  invoice-ninja:
+    image: invoiceninja/invoiceninja:5.10.43
+    container_name: ${CONTAINER_NAME:-invoice-ninja}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8086}:80"
+    environment:
+      APP_URL: ${APP_URL:-http://localhost:8086}
+      APP_KEY: ${APP_KEY:-base64:change-me-invoice-ninja}
+      DB_HOST: ${DB_HOST:-mysql}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_DATABASE: ${DB_DATABASE:-invoiceninja}
+      DB_USERNAME: ${DB_USERNAME:-invoiceninja}
+      DB_PASSWORD: ${DB_PASSWORD:-invoiceninja}
+    volumes:
+      - invoice_ninja_storage:/var/www/app/storage
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /var/www/app/storage || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  invoice_ninja_storage:
+
+networks:
+  tinohost-network:
+    external: true

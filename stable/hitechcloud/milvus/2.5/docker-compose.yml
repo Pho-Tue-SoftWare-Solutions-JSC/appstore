@@ -1,0 +1,30 @@
+version: "3"
+services:
+  milvus:
+    image: milvusdb/milvus:v2.5.5
+    container_name: ${CONTAINER_NAME:-milvus}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-19530}:19530"
+      - "${HTTP_PORT:-9091}:9091"
+    environment:
+      ETCD_ENDPOINTS: ${ETCD_ENDPOINTS:-etcd:2379}
+      MINIO_ADDRESS: ${MINIO_ADDRESS:-minio:9000}
+    command: ["milvus", "run", "standalone"]
+    volumes:
+      - milvus_data:/var/lib/milvus
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /var/lib/milvus || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  milvus_data:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,34 @@
+version: "3"
+services:
+  chatwoot:
+    image: chatwoot/chatwoot:v4.3.0
+    container_name: ${CONTAINER_NAME:-chatwoot}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3005}:3000"
+    environment:
+      RAILS_ENV: ${RAILS_ENV:-production}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE:-chatwoot-secret-key}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3005}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      POSTGRES_HOST: ${POSTGRES_HOST:-postgresql}
+      POSTGRES_DATABASE: ${POSTGRES_DATABASE:-chatwoot}
+      POSTGRES_USERNAME: ${POSTGRES_USERNAME:-chatwoot}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-chatwoot}
+    volumes:
+      - chatwoot_storage:/app/storage
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /app/storage || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  chatwoot_storage:
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,27 @@
+version: "3"
+services:
+  wikijs:
+    image: ghcr.io/requarks/wiki:2.5
+    container_name: ${CONTAINER_NAME:-wikijs}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3007}:3000"
+    environment:
+      DB_TYPE: ${DB_TYPE:-postgres}
+      DB_HOST: ${DB_HOST:-postgresql}
+      DB_PORT: ${DB_PORT:-5432}
+      DB_USER: ${DB_USER:-wikijs}
+      DB_PASS: ${DB_PASS:-wikijs}
+      DB_NAME: ${DB_NAME:-wikijs}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1:3000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+networks:
+  tinohost-network:
+    external: true

@@ -1,0 +1,26 @@
+version: "3"
+services:
+  pocketbase:
+    image: ghcr.io/muchobien/pocketbase:0.28.4
+    container_name: ${CONTAINER_NAME:-pocketbase}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8091}:8090"
+    command: ["/pb/pocketbase", "serve", "--http=0.0.0.0:8090"]
+    volumes:
+      - pocketbase_data:/pb/pb_data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /pb/pb_data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - tinohost-network
+
+volumes:
+  pocketbase_data:
+
+networks:
+  tinohost-network:
+    external: true

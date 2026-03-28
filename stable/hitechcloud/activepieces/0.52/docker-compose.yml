@@ -1,0 +1,35 @@
+version: "3"
+services:
+  activepieces:
+    image: activepieces/activepieces:0.52.0
+    container_name: ${CONTAINER_NAME:-activepieces}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8082}:80"
+    environment:
+      AP_QUEUE_MODE: ${AP_QUEUE_MODE:-MEMORY}
+      AP_DB_TYPE: ${AP_DB_TYPE:-POSTGRES}
+      AP_POSTGRES_HOST: ${AP_POSTGRES_HOST:-postgresql}
+      AP_POSTGRES_PORT: ${AP_POSTGRES_PORT:-5432}
+      AP_POSTGRES_DATABASE: ${AP_POSTGRES_DATABASE:-activepieces}
+      AP_POSTGRES_USERNAME: ${AP_POSTGRES_USERNAME:-activepieces}
+      AP_POSTGRES_PASSWORD: ${AP_POSTGRES_PASSWORD:-activepieces}
+      AP_ENCRYPTION_KEY: ${AP_ENCRYPTION_KEY:-change-this-encryption-key}
+      AP_FRONTEND_URL: ${AP_FRONTEND_URL:-http://localhost:8082}
+    volumes:
+      - activepieces_data:/root/.activepieces
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /root/.activepieces || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - tinohost-network
+
+volumes:
+  activepieces_data:
+
+networks:
+  tinohost-network:
+    external: true

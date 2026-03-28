@@ -1,7 +1,7 @@
 {
   "valid": true,
   "violations": [],
-  "lastModified": 1774915200,
+  "lastModified": 1775001600,
   "apps": [
     {
       "icon": "",
@@ -2406,6 +2406,366 @@
           "lastModified": 1774915200
         }
       ]
+    },
+    {
+      "icon": "",
+      "name": "Appwrite",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Appwrite",
+        "type": "apphub",
+        "tags": ["website", "database", "tool"],
+        "shortDescZh": "开源后端即服务平台",
+        "shortDescEn": "Open-source backend-as-a-service platform",
+        "key": "appwrite",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://appwrite.io",
+        "github": "https://github.com/appwrite/appwrite",
+        "document": "https://appwrite.io/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.8",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "PocketBase",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "PocketBase",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "轻量级实时后端与嵌入式数据库",
+        "shortDescEn": "Lightweight realtime backend with embedded database",
+        "key": "pocketbase",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://pocketbase.io",
+        "github": "https://github.com/pocketbase/pocketbase",
+        "document": "https://pocketbase.io/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.28",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "RedisInsight",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "RedisInsight",
+        "type": "tool",
+        "tags": ["tool", "database"],
+        "shortDescZh": "Redis 可视化管理工具",
+        "shortDescEn": "Visual management tool for Redis",
+        "key": "redisinsight",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://redis.io/insight/",
+        "github": "https://github.com/RedisInsight/RedisInsight",
+        "document": "https://redis.io/docs/latest/operate/redisinsight/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.60",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Mongo Express",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Mongo Express",
+        "type": "tool",
+        "tags": ["tool", "database"],
+        "shortDescZh": "MongoDB Web 管理界面",
+        "shortDescEn": "Web admin interface for MongoDB",
+        "key": "mongo-express",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://github.com/mongo-express/mongo-express",
+        "github": "https://github.com/mongo-express/mongo-express",
+        "document": "https://github.com/mongo-express/mongo-express",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 256,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "1.0",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "OpenSearch",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "OpenSearch",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "开源分布式搜索与分析引擎",
+        "shortDescEn": "Open-source distributed search and analytics engine",
+        "key": "opensearch",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://opensearch.org",
+        "github": "https://github.com/opensearch-project/OpenSearch",
+        "document": "https://opensearch.org/docs/latest/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.19",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "OpenSearch Dashboards",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "OpenSearch Dashboards",
+        "type": "monitoring",
+        "tags": ["monitoring", "tool"],
+        "shortDescZh": "OpenSearch 可视化分析界面",
+        "shortDescEn": "Visualization and analytics UI for OpenSearch",
+        "key": "opensearch-dashboards",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://opensearch.org/docs/latest/dashboards/",
+        "github": "https://github.com/opensearch-project/OpenSearch-Dashboards",
+        "document": "https://opensearch.org/docs/latest/dashboards/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.19",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Milvus",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Milvus",
+        "type": "database",
+        "tags": ["database", "tool"],
+        "shortDescZh": "高性能向量数据库",
+        "shortDescEn": "High-performance vector database",
+        "key": "milvus",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 8,
+        "website": "https://milvus.io",
+        "github": "https://github.com/milvus-io/milvus",
+        "document": "https://milvus.io/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 2048,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.5",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Activepieces",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Activepieces",
+        "type": "tool",
+        "tags": ["tool", "devops"],
+        "shortDescZh": "开源自动化工作流平台",
+        "shortDescEn": "Open-source workflow automation platform",
+        "key": "activepieces",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.activepieces.com",
+        "github": "https://github.com/activepieces/activepieces",
+        "document": "https://www.activepieces.com/docs",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.52",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Chatwoot",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Chatwoot",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "客户支持与实时聊天平台",
+        "shortDescEn": "Customer support and live chat platform",
+        "key": "chatwoot",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.chatwoot.com",
+        "github": "https://github.com/chatwoot/chatwoot",
+        "document": "https://www.chatwoot.com/docs/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "4.3",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Outline",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Outline",
+        "type": "tool",
+        "tags": ["tool", "website"],
+        "shortDescZh": "团队知识库与文档协作平台",
+        "shortDescEn": "Team knowledge base and documentation platform",
+        "key": "outline",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://www.getoutline.com",
+        "github": "https://github.com/outline/outline",
+        "document": "https://docs.getoutline.com/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "0.78",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Wiki.js",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Wiki.js",
+        "type": "website",
+        "tags": ["website", "cms"],
+        "shortDescZh": "现代化 Wiki 与文档系统",
+        "shortDescEn": "Modern wiki and documentation system",
+        "key": "wikijs",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 2,
+        "website": "https://js.wiki",
+        "github": "https://github.com/requarks/wiki",
+        "document": "https://docs.requarks.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 512,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "2.5",
+          "lastModified": 1775001600
+        }
+      ]
+    },
+    {
+      "icon": "",
+      "name": "Invoice Ninja",
+      "readMe": "",
+      "lastModified": 1775001600,
+      "additionalProperties": {
+        "name": "Invoice Ninja",
+        "type": "website",
+        "tags": ["website", "tool"],
+        "shortDescZh": "发票、报价与账单管理平台",
+        "shortDescEn": "Invoicing, quotes, and billing management platform",
+        "key": "invoice-ninja",
+        "Required": ["docker"],
+        "crossVersionUpdate": true,
+        "limit": 1,
+        "recommend": 4,
+        "website": "https://invoiceninja.com",
+        "github": "https://github.com/invoiceninja/dockerfiles",
+        "document": "https://invoiceninja.github.io/",
+        "architectures": ["amd64", "arm64"],
+        "memoryRequired": 1024,
+        "version": 1.0
+      },
+      "versions": [
+        {
+          "name": "5.10",
+          "lastModified": 1775001600
+        }
+      ]
     }
   ],
   "additionalProperties": {
@@ -2422,6 +2782,6 @@
       {"key": "docker", "name": "Docker", "sort": 10},
       {"key": "monitoring", "name": "Monitoring", "sort": 11}
     ],
-    "version": "1.4.0"
+    "version": "1.5.0"
   }
 }

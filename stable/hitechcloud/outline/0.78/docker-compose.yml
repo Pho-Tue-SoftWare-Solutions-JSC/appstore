@@ -1,0 +1,32 @@
+version: "3"
+services:
+  outline:
+    image: outlinewiki/outline:0.78.1
+    container_name: ${CONTAINER_NAME:-outline}
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-3006}:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      URL: ${URL:-http://localhost:3006}
+      SECRET_KEY: ${SECRET_KEY:-outline-secret-key}
+      UTILS_SECRET: ${UTILS_SECRET:-outline-utils-secret}
+      DATABASE_URL: ${DATABASE_URL:-postgres://outline:outline@postgresql:5432/outline}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+    volumes:
+      - outline_storage:/var/lib/outline/data
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /var/lib/outline/data || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - tinohost-network
+
+volumes:
+  outline_storage:
+
+networks:
+  tinohost-network:
+    external: true

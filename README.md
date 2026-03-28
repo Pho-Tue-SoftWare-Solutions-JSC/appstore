@@ -2,7 +2,7 @@
 
 Kho template triển khai ứng dụng bằng Docker Compose cho hệ sinh thái `hitechcloud`.
 
-> Metadata version hiện tại: `1.4.0`
+> Metadata version hiện tại: `1.5.0`
 
 ## Mục lục
 
@@ -190,6 +190,18 @@ Hiện tại repository đang có các ứng dụng sau:
 | Zitadel | `zitadel` | Security / IAM | `2.66` | Quản lý danh tính và truy cập hiện đại |
 | Harbor | `harbor` | DevOps / Registry | `2.12` | Private container registry doanh nghiệp |
 | GitLab | `gitlab` | Git / DevOps | `17.10` | Nền tảng Git và CI/CD all-in-one |
+| Appwrite | `appwrite` | AppHub / Backend | `1.8` | Backend-as-a-service mã nguồn mở |
+| PocketBase | `pocketbase` | Database / Backend | `0.28` | Backend nhẹ với embedded database |
+| RedisInsight | `redisinsight` | Database / Tool | `2.60` | Giao diện quản trị Redis |
+| Mongo Express | `mongo-express` | Database / Tool | `1.0` | Giao diện web cho MongoDB |
+| OpenSearch | `opensearch` | Database / Search | `2.19` | Search và analytics engine mã nguồn mở |
+| OpenSearch Dashboards | `opensearch-dashboards` | Monitoring / Search | `2.19` | Dashboard phân tích cho OpenSearch |
+| Milvus | `milvus` | Database / AI / Search | `2.5` | Vector database hiệu năng cao |
+| Activepieces | `activepieces` | Tool / Automation | `0.52` | Workflow automation mã nguồn mở |
+| Chatwoot | `chatwoot` | Tool / Support | `4.3` | Nền tảng customer support và live chat |
+| Outline | `outline` | Tool / Wiki | `0.78` | Knowledge base cho team |
+| Wiki.js | `wikijs` | Website / CMS / Wiki | `2.5` | Hệ thống wiki hiện đại |
+| Invoice Ninja | `invoice-ninja` | Website / Business | `5.10` | Quản lý hóa đơn và báo giá |
 
 ## Quy ước chung của template
 
